@@ -1,1 +1,50 @@
-Hello World
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel=¨stylesheet¨ type=¨text/css¨ href=¨styles.css¨>
+    <script src="scripts.js" type="text/javascript"></script>
+
+
+</head>
+
+<body>
+    <div id="controls-panel">
+        <label>Choose a subreddit: r/
+            <input type="text" id="subreddit-picker">
+        </label>
+        <label>Sorted By:
+            <select id="sort-picker">
+                <option value="new">New</option>
+                <option value="top">Top</option>
+                <option value="controversial">Controversial</option>
+                <option value="rising">Rising</option>
+                <option value="hot" selected>Hot</option>
+            </select>
+        </label>
+        <label>Show post titles?
+            <input type="checkbox" id="post-titles-chx">
+        </label>
+        <label>NSFW:
+            <select id="nsfw-picker">
+                <option value="true">Only NSFW</option>
+                <option value="false">No NSFW</option>
+                <option value="all" selected>Show All</option>
+            </select>
+        </label>
+        <button id="load-btn">Load Images</button>
+    </div>
+    <div id="grid" class="masonry-grid">
+    </div>
+    <div id="loader"></div>
+    <progress id="prog"></progress>
+    <div id="overlay" class="hidden">
+        <div id="image-viewer-container">
+            <img id="image-viewer-pic"></img>
+            <video id="image-viewer-video" controls class="video-js vjs-default-skin"></video>
+            <a id="image-viewer-title"></a>
+        </div>
+    </div>
+</body>
+
+</html>
