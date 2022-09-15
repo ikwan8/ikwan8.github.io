@@ -138,9 +138,9 @@ showTitlesChx.addEventListener("change", function (evt) {
 loadBtn.addEventListener("click", function (event) {
 	if (subredditPicker.value != "") {
 		console.log("Showing loader due to click...");
-		loader.style.opacity = 1;
-		prog.style.opacity = 1;
-		grid.classList.add("blur");
+		loader.style.opacity = 0;
+		prog.style.opacity = 0;
+		// grid.classList.add("blur");
 		grid.innerHTML = "";
 		ResetParams();
 		MakeMoreCards(40);
@@ -154,7 +154,7 @@ subredditPicker.addEventListener("keydown", function (event) {
 			console.log("Showing loader due to enter...");
 			loader.style.opacity = 1;
 			prog.style.opacity = 1;
-			grid.classList.add("blur");
+			// grid.classList.add("blur");
 			grid.innerHTML = "";
 			ResetParams();
 			MakeMoreCards(40);
@@ -370,9 +370,9 @@ window.addEventListener("scroll", function (event) {
 		subredditPicker.value != ""
 	) {
 		console.log("Showing loader due to scroll...");
-		loader.style.opacity = 1;
-		prog.style.opacity = 1;
-		grid.classList.add("blur");
+		loader.style.opacity = 0;
+		prog.style.opacity = 0;
+		// grid.classList.add("blur");
 		disableScroll();
 		MakeMoreCards(40);
 	}
@@ -539,7 +539,7 @@ function ExpandImage(event) {
 		selectedCard.children[1].children[0].innerHTML;
 	imageViewer.children[2].href = selectedCard.children[1].children[0].href;
 	overlay.classList.add("expanded");
-	grid.classList.add("blur");
+	// grid.classList.add("blur");
 	if (
 		selectedCard.children[0].tagName.toLowerCase() == "video" &&
 		selectedCard.children[0].dataset.src.includes(".mpd")
