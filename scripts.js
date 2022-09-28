@@ -138,8 +138,8 @@ showTitlesChx.addEventListener("change", function (evt) {
 loadBtn.addEventListener("click", function (event) {
 	if (subredditPicker.value != "") {
 		console.log("Showing loader due to click...");
-		loader.style.opacity = 0;
-		prog.style.opacity = 0;
+		loader.style.opacity = 0.25;
+		prog.style.opacity = 0.25;
 		// grid.classList.add("blur");
 		grid.innerHTML = "";
 		ResetParams();
@@ -152,8 +152,8 @@ subredditPicker.addEventListener("keydown", function (event) {
 	if (event.key == "Enter") {
 		if (subredditPicker.value != "") {
 			console.log("Showing loader due to enter...");
-			loader.style.opacity = 1;
-			prog.style.opacity = 1;
+			loader.style.opacity = 0.25;
+			prog.style.opacity = 0.25;
 			// grid.classList.add("blur");
 			grid.innerHTML = "";
 			ResetParams();
@@ -370,8 +370,8 @@ window.addEventListener("scroll", function (event) {
 		subredditPicker.value != ""
 	) {
 		console.log("Showing loader due to scroll...");
-		loader.style.opacity = 0;
-		prog.style.opacity = 0;
+		loader.style.opacity = 0.25;
+		prog.style.opacity = 0.25;
 		// grid.classList.add("blur");
 		disableScroll();
 		MakeMoreCards(40);
